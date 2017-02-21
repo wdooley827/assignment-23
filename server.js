@@ -1,3 +1,13 @@
+//WEBPACK -- configuration
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackConfig = require('./webpack.config.js');
+const webpackCompiler = webpack(webpackConfig)
+
+
+
+
+
 //IMPORTS
 //--------------
 //import express web server
@@ -5,8 +15,18 @@ const express = require('express')
 //import templating engine for rendering HTML
 const renderFile = require('ejs').renderFile
 
+
+
 //run the express app
 const app = express()
+
+if( process.env === 'development' ){
+	app.use(webpackMiddleware(webpackCompiler, {
+	   noInfo: true,
+	   publicPath: webpackConfig.output.publicPath
+	}));
+}
+
 
 // set port if exists in environment for heroku or live site, else set to 3000 for dev
 const PORT = process.env.PORT || 3000

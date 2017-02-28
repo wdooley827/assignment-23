@@ -18,11 +18,6 @@ npm install
 npm run go
 ```
 
-- Server
-```
-npm start
-```
-
 ##### 4. Workflow
 Do scss and javascript work in the `src/` directory. It will compile to the `dist/` with the taskrunner.
 

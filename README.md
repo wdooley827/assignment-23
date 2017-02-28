@@ -13,7 +13,6 @@ npm install
 ```
 
 ##### 3. Run the taskrunner & run the local server
-- Task Runner
 ```
 npm run go
 ```

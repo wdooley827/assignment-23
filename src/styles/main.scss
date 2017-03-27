@@ -3,13 +3,23 @@
 }
 
 body{
-	background: limegreen;
+	background: white;
 }
-
-$txt-color: maroon;
 
 h2{
-	color: $txt-color;
-	border-bottom: 4px solid $txt-color;
+	color: black;
 }
 
+.congressProfileThumbnail {
+	border: 4px solid black;
+	vertical-align: top;
+	display: inline-block;
+	width: 30%;
+	height: 350px;
+	margin: 5px;
+	background: #CBF7C1;
+}
+
+.congressProfileThumbnail li{
+	font-size: 14px;
+}
